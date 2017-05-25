@@ -32,6 +32,7 @@ public class GestioneVita : MonoBehaviour
 			testoVita.text = "0";
 			i.fillAmount = 0;
 			cowboy.GetComponent<CowboyMove> ().muori ();
+			cowboy.GetComponent<CowboyMove> ().enabled = false;
 		} 
 		else 
 		{

@@ -13,7 +13,9 @@ public class CowboyMove : MonoBehaviour
 	private int avanti;
 	private int indietro;
 	private int morte;
+	private int fermo;
 	//variabili per i nomi dei trigger
+	public string triggerFermo;
 	public string triggerPugno;
 	public string triggerAvanti;
 	public string triggerIndietro;
@@ -36,6 +38,7 @@ public class CowboyMove : MonoBehaviour
 		pugno = Animator.StringToHash (triggerPugno);
 		avanti = Animator.StringToHash (triggerAvanti);
 		indietro = Animator.StringToHash (triggerIndietro);
+		fermo = Animator.StringToHash (triggerFermo);
 		morte = Animator.StringToHash (triggerMorte);
 	}
 	
@@ -116,4 +119,23 @@ public class CowboyMove : MonoBehaviour
 		anim.SetTrigger (morte);
 	}
 
+	public void avantiFunc()
+	{
+		anim.SetTrigger (avanti);
+	}
+
+	public void indietroFunc()
+	{
+		anim.SetTrigger (indietro);
+	}
+
+	public void fermoFunc()
+	{
+		anim.SetTrigger (fermo);
+	}
+
+	public void pugnoFunc()
+	{
+		anim.SetTrigger (pugno);
+	}
 }
